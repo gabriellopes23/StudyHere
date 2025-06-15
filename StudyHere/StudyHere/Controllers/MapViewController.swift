@@ -21,7 +21,7 @@ class MapViewController: UIViewController {
 
 // MARK: - Extensions
 extension MapViewController {
-    func style() {
+    private func style() {
         mapView.translatesAutoresizingMaskIntoConstraints = false
         
         var config = UIButton.Configuration.glass()
@@ -35,7 +35,7 @@ extension MapViewController {
         filterButton.addTarget(self, action: #selector(showFilters), for: .primaryActionTriggered)
     }
     
-    func layout() {
+    private func layout() {
         view.addSubview(mapView)
         view.addSubview(filterButton)
         
@@ -60,6 +60,8 @@ extension MapViewController {
 // MARK: - Actions
 extension MapViewController {
     @objc func showFilters() {
-        // TODO: Implement this!
+        let vc = FilterViewController()
+        
+        present(vc, animated: true)
     }
 }

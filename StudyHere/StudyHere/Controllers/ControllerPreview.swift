@@ -8,25 +8,25 @@
 import UIKit
 import SwiftUI
 
-//struct ControllerPreview: UIViewControllerRepresentable {
-//    func makeUIViewController(context: Context) -> some UIViewController {
-//        return FilterViewController()
-//    }
-//    
-//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-//        // Nothing
-//    }
-//}
-
-struct ControllerPreview: UIViewRepresentable {
-    func makeUIView(context: Context) -> some UIView {
-        return FilterRow()
+struct ControllerPreview: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> some UIViewController {
+        return PlaceDetailViewController()
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         // Nothing
     }
 }
+
+//struct ControllerPreview: UIViewRepresentable {
+//    func makeUIView(context: Context) -> some UIView {
+//        return FilterRow()
+//    }
+//    
+//    func updateUIView(_ uiView: UIViewType, context: Context) {
+//        // Nothing
+//    }
+//}
 
 #Preview(body: {
     ControllerPreview()
